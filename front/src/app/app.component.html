@@ -2,8 +2,10 @@
 <div>
   <h2>List of networked devices and status</h2>
 
-  <div *ngFor="let target of Devices">
+  <div *ngFor="let target of Devices" [ngClass]="'device-row'">
+    <div>
+      <button mat-raised-button color="primary" [ngClass]="'device-button'">Query</button>
+    </div>
     <div>{{ target.name }} @ {{ target.address }}</div>
-    <button mat-raised-button color="primary">Query</button>
   </div>
 </div>
