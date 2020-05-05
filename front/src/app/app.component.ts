@@ -6,5 +6,14 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.less']
 })
 export class AppComponent {
-  title = 'haus-viewer-pro';
+  Devices: Device[] = [
+    {name: 'Main Computer', address: '1.2.3.4'},
+    {name: 'Side Computer', address: '5.6.7.8'}
+  ];
+}
+
+
+interface Device {
+  name: string,
+  address: string,
 }
